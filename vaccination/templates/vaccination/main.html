@@ -1,0 +1,54 @@
+{% extends 'vaccination/header.html' %}
+
+{% block content %}
+<style>
+a:link, a:visited {
+  background-color: #458FF6;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width:100%;
+}
+</style>
+
+<h1 class="display-5" style="background-color: #458FF6;text-align:center;color:#fff;font-weight: normal;">Child vaccination App</h1>
+         <div class="listview-title mt-2"> Login /Register page</div>
+        
+         <div class="section mt-2">
+       <div class="row">
+ <div class="col-sm-4"> <a  href="{% url 'login' %}">Parent/Hospital Login</a>
+</div><hr>
+  <div class="col-sm-4"><a href="{% url 'user_signup' %}"> Parent Register</a></div><hr>
+   <div class="col-sm-4"> <a href="{% url 'hospital_signup' %}" >Hospital Register</a>
+</div><hr>
+  
+
+   <div class="col-sm-4">
+      <a href="{% url 'adminlogin' %}" >Admin Login</a></div><hr>
+                    
+</div><br>
+                </div>
+                  
+    <!-- * App Sidebar -->
+     {% if error %}
+{{ error }}
+
+{% endif %}
+
+
+    <!-- iOS Add to Home Action Sheet -->
+   
+    <!-- * iOS Add to Home Action Sheet -->
+    <!-- Android Add to Home Action Sheet -->
+   
+    <!-- * Android Add to Home Action Sheet -->
+
+
+    <!-- ============== Js Files ==============  -->
+    <!-- Bootstrap -->
+           
+{% endblock %}
+    
+					

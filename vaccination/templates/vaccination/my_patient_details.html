@@ -1,0 +1,64 @@
+{% include 'vaccination/header1.html' %}	
+{% block content %}
+
+	 <div class="listview-title mt-2">My Patient Details</div>
+        
+         <div class="section mt-2">
+        
+            <div class="row">
+             	{% for getdetails1 in getdetails %}
+              <div class="col-6">
+                    <div class="card product-card" >
+                        <div class="card-body" style="line-height: auto;">
+                           <h2 class="price"><b>Child name:</b> &nbsp;{{ getdetails1.Childname }}</h2>
+ <p class="text" style="font-size: 16px;"><b>Age:</b> &nbsp;{{getdetails1.Age}}</p>
+                            						
+						<p class="text" style="font-size: 16px;"><b>Contactno:</b> &nbsp;{{getdetails1.Contactno}}</p>
+                             
+                            <p class="text"style="font-size: 16px;" ><b>Type:</b> &nbsp;Vaccination Appointment</p>
+                          
+                             
+                                 <p class="text" style="font-size: 16px;"><b>Appointment date:</b> &nbsp;{{getdetails1.Appointmentdate}}</p>
+                            <div class="text" style="font-size: 16px;"><b>Time:</b> &nbsp;{{getdetails1.Time}}</div>
+                            
+<div class="text" style="font-size: 16px;"><b>Aadharno:</b> &nbsp;{{getdetails1.Aadharno}}</div>
+                            <div class="text" style="font-size: 16px;"><b>Hospital Branch:</b> &nbsp;{{getdetails1.hospitalbranch}}</div>
+   <div class="text" style="font-size: 16px;"><b>Vaccine name:</b> &nbsp;<b style="color:green"><b>{{getdetails1.vaccine_name}}</b></div>
+<div class="text" style="font-size: 16px;"><b>Status:</b> &nbsp;<b style="color:green">{{getdetails1.status}}</b></div>
+                                                   
+						  <center>
+							 <a href="update_status/{{getdetails1.id}}" class="btn btn-warning" id = '{{getdetails1.id}}'>Update Result</a>
+		
+    	
+		
+	</center>
+                        </div>
+                    
+                    </div>
+                    
+                </div>
+             {% endfor %}
+            </div>
+           
+
+        </div>
+
+    <!-- * App Sidebar -->
+     {% if error %}
+{{ error }}
+
+{% endif %}
+
+{% endblock %}
+
+    <!-- iOS Add to Home Action Sheet -->
+   
+    <!-- * iOS Add to Home Action Sheet -->
+    <!-- Android Add to Home Action Sheet -->
+   
+    <!-- * Android Add to Home Action Sheet -->
+
+
+    <!-- ============== Js Files ==============  -->
+    <!-- Bootstrap -->
+  
